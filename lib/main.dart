@@ -1,4 +1,4 @@
-import 'package:ecom_101/screens/splash.dart';
+import 'package:ecom_101/screens/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:provider/provider.dart';
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.blue,
             ),
-            home: const SplashScreen());
+            home: const WelcomeScreen());
       });
     });
   }

@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:sizer/sizer.dart';
 
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+class WelcomeScreen extends StatefulWidget {
+  const WelcomeScreen({Key? key}) : super(key: key);
 
   @override
-  _SplashScreenState createState() => _SplashScreenState();
+  _WelcomeScreenState createState() => _WelcomeScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _WelcomeScreenState extends State<WelcomeScreen> {
 
   navigationToPage() {
     Navigator.of(context).pushAndRemoveUntil(
