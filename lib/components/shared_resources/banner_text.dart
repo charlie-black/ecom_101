@@ -17,7 +17,7 @@ class BannerText extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Text(
-              '| NEW COLLECTION',
+              title,
               style: kTextStyle.copyWith(
                 fontSize: 15,
                 fontWeight: FontWeight.normal,
@@ -29,7 +29,7 @@ class BannerText extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Text(
-              'HANG OUT\n& PARTY',
+              description,
               style: kTextStyle.copyWith(
                 fontSize: 24,
                 fontWeight: FontWeight.normal,
@@ -39,6 +39,6 @@ class BannerText extends StatelessWidget {
           ),
         ],
       ),
-    ),
+    );
   }
 }

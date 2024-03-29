@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ecom_101/screens/random.dart';
+import 'package:ecom_101/screens/tab_screen.dart';
 import 'package:ecom_101/utils/constants.dart';
 import 'package:badges/badges.dart' as badges;
 
@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
 
   final List<Widget> _pages = [
-    const MyTabPage(),
+    const MyTabPageScreen(),
     Container(child: Center(child: Text('Search Page'))),
     Container(child: Center(child: Text('Shopping Bag Page'))),
     Container(child: Center(child: Text('Profile Page'))),
