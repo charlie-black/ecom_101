@@ -16,7 +16,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
 
   navigationToPage() {
     Navigator.of(context).pushAndRemoveUntil(
-        MaterialPageRoute(builder: (context) => const HomePage()),
+        MaterialPageRoute(builder: (context) =>  HomePage()),
         (Route<dynamic> route) => false);
   }
 
