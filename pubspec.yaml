@@ -43,6 +43,10 @@ dependencies:
   get:
   google_fonts:
   provider:
+  bottom_navy_bar:
+  badges:
+  font_awesome_flutter:
+  carousel_slider:
 
 
 dev_dependencies:
