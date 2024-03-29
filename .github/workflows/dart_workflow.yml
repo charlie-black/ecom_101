@@ -1,0 +1,29 @@
+name: Dart CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Dart
+        uses: actions/setup-dart@v2
+        with:
+          channel: stable
+
+      - name: Get dependencies
+        run: dart pub get
+
+      - name: Run tests
+        run: dart test
+
