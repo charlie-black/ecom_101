@@ -3,12 +3,10 @@ import 'package:ecom_101/components/banner_two.dart';
 import 'package:ecom_101/components/featured_products.dart';
 import 'package:ecom_101/components/banner_one.dart';
 import 'package:ecom_101/components/recommended.dart';
-import 'package:ecom_101/components/shared_resources/carousel.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-
-import '../components/shared_resources/text_header.dart';
-import '../utils/constants.dart';
+import '../shared_resources/carousel.dart';
+import '../shared_resources/text_header.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});

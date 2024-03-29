@@ -39,6 +39,9 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
+        leading: _currentIndex == 0
+            ? Image.asset("assets/images/menu.png",width: 10,)
+            : Container(),
         title: Text(
           _getAppBarLabel(_currentIndex),
           style: kTextStyle.copyWith(color: Colors.black, fontSize: 20),
@@ -46,26 +49,26 @@ class _HomePageState extends State<HomePage> {
         actions: [
           _currentIndex == 0
               ? Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Stack(
-              children: [
-                const Icon(Icons.notifications_none,
-                    size: 30, color: Colors.black),
-                Positioned(
-                  right: 0,
-                  top: 0,
-                  child: badges.Badge(
-                    badgeContent: Text(
-                      '.',
-                      style: kTextStyle.copyWith(
-                          color: kDangerColor, fontSize: 8),
-                    ),
+                  padding: const EdgeInsets.all(8.0),
+                  child: Stack(
+                    children: [
+                      const Icon(Icons.notifications_none,
+                          size: 30, color: Colors.black),
+                      Positioned(
+                        right: 0,
+                        top: 0,
+                        child: badges.Badge(
+                          badgeContent: Text(
+                            '.',
+                            style: kTextStyle.copyWith(
+                                color: kDangerColor, fontSize: 8),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-              ],
-            ),
-          )
-              : Container()
+                )
+              : Container(),
         ],
       ),
       body: _pages[_currentIndex],

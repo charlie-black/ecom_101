@@ -1,9 +1,10 @@
-import 'package:ecom_101/components/shared_resources/gradient_button.dart';
 import 'package:ecom_101/screens/home_page.dart';
 import 'package:ecom_101/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:sizer/sizer.dart';
+
+import '../shared_resources/gradient_button.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -49,7 +50,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   color: Colors.white,
                   shadows: [
                     const Shadow(color: Colors.black, blurRadius: 2)
-                  ], // Add shadow for better visibility
+                  ],
                 ),
               ),
             ),
@@ -63,7 +64,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   color: Colors.white,
                   shadows: [
                     const Shadow(color: Colors.black, blurRadius: 2)
-                  ], // Add shadow for better visibility
+                  ],
                 ),
               ),
             ),
