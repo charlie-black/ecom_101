@@ -40,7 +40,6 @@ dependencies:
   staggered_grid_view_flutter:
   hexcolor:
   get:
-  google_fonts:
   provider:
   badges:
   font_awesome_flutter:
