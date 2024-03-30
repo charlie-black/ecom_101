@@ -21,7 +21,11 @@ class _HomePageState extends State<HomePage> {
     const MyTabPageScreen(),
     const SearchResultsPage(),
     const MyOrdersScreen(),
-    Container(child: Center(child: Text('Profile Page'))),
+    Center(
+        child: Text(
+          'Profile Page',
+          style: kTextStyle.copyWith(color: Colors.black),
+        )),
   ];
 
   final List<IconData> _activeIcons = [
@@ -42,37 +46,50 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-
       appBar: AppBar(
-        centerTitle: true,
+        centerTitle: _currentIndex == 1 ? false : true,
         elevation: 0,
         backgroundColor: Colors.white,
-        leading: _currentIndex == 0||_currentIndex==2
+        leading: _currentIndex == 0 || _currentIndex == 2
             ? Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                children: [
-                  SizedBox(
-                            width: 20,
-                            height: 20,
-                            child: SvgPicture.asset(
-                  'assets/images/menu.svg',
-                  width: 20,
-                  height: 20,
-                  fit: BoxFit.contain,
-                            ),
-                          ),
-                ],
-              ),
-            )
-            : Container(),
-
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 20,
+                      height: 20,
+                      child: SvgPicture.asset(
+                        'assets/images/menu.svg',
+                        width: 20,
+                        height: 20,
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            : _currentIndex == 1
+                ? IconButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomePage(
+                               )),
+                      );
+                    },
+                    icon: const Icon(
+                      Icons.arrow_back_ios,
+                      size: 15,
+                      color: Colors.black,
+                    ))
+                : Container(),
         title: Text(
           _getAppBarLabel(_currentIndex),
           style: kTextStyle.copyWith(color: Colors.black, fontSize: 20),
         ),
         actions: [
-          _currentIndex == 0||_currentIndex==2
+          _currentIndex == 0 || _currentIndex == 2
               ? Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Stack(
