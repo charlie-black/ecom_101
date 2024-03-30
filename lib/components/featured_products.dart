@@ -54,8 +54,8 @@ class _FeaturedProductsState extends State<FeaturedProducts> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    width: 150,
-                    height: 23.h,
+                    width: 130,
+                    height: 27.h,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.grey.withOpacity(0.3),
