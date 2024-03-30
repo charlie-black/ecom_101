@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:sizer/sizer.dart';
 
 import '../utils/constants.dart';
@@ -22,7 +23,6 @@ class _RecommendedProductsState extends State<RecommendedProducts> {
       'productName': 'Cotton T-shirt',
       'productPrice': '\$30.00',
     }
-
   ];
 
   @override
@@ -60,27 +60,34 @@ class _RecommendedProductsState extends State<RecommendedProducts> {
                       ),
                     ),
                   ),
+                  const SizedBox(
+                    width: 10,
+                  ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(height: 10,),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          featuredProducts[index]['productName'],
-                          style: kTextStyle.copyWith(fontSize: 15,color: Colors.black),
-                        ),
+                      const SizedBox(
+                        height: 30,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          featuredProducts[index]['productPrice'],
-                          style: kTextStyle.copyWith(fontSize: 15,color: Colors.black),
-                        ),
+                      Text(
+                        featuredProducts[index]['productName'],
+                        style: kTextStyle.copyWith(
+                            fontSize: 12,
+                            color: HexColor("#1D1F22"),
+                            fontWeight: FontWeight.w500),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        featuredProducts[index]['productPrice'],
+                        style: kTextStyle.copyWith(
+                            fontSize: 16,
+                            color: HexColor("#1D1F22"),
+                            fontWeight: FontWeight.w700),
                       ),
                     ],
                   ),
-
                 ],
               ),
             );

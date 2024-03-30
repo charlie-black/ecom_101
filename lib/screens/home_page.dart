@@ -1,7 +1,11 @@
+import 'package:ecom_101/screens/search_page.dart';
 import 'package:flutter/material.dart';
 import 'package:ecom_101/screens/tab_screen.dart';
 import 'package:ecom_101/utils/constants.dart';
 import 'package:badges/badges.dart' as badges;
+import 'package:flutter_svg/svg.dart';
+
+import 'my_orders.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -15,8 +19,8 @@ class _HomePageState extends State<HomePage> {
 
   final List<Widget> _pages = [
     const MyTabPageScreen(),
-    Container(child: Center(child: Text('Search Page'))),
-    Container(child: Center(child: Text('Shopping Bag Page'))),
+    const SearchResultsPage(),
+    const MyOrdersScreen(),
     Container(child: Center(child: Text('Profile Page'))),
   ];
 
@@ -37,17 +41,38 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
+
       appBar: AppBar(
         centerTitle: true,
-        leading: _currentIndex == 0
-            ? Image.asset("assets/images/menu.png",width: 10,)
+        elevation: 0,
+        backgroundColor: Colors.white,
+        leading: _currentIndex == 0||_currentIndex==2
+            ? Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  SizedBox(
+                            width: 20,
+                            height: 20,
+                            child: SvgPicture.asset(
+                  'assets/images/menu.svg',
+                  width: 20,
+                  height: 20,
+                  fit: BoxFit.contain,
+                            ),
+                          ),
+                ],
+              ),
+            )
             : Container(),
+
         title: Text(
           _getAppBarLabel(_currentIndex),
           style: kTextStyle.copyWith(color: Colors.black, fontSize: 20),
         ),
         actions: [
-          _currentIndex == 0
+          _currentIndex == 0||_currentIndex==2
               ? Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Stack(

@@ -1,48 +1,46 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:sizer/sizer.dart';
 
 import '../utils/constants.dart';
 
-class BannerThree extends StatefulWidget {
-  const BannerThree({Key? key}) : super(key: key);
+class TopCollection extends StatefulWidget {
+  const TopCollection({Key? key}) : super(key: key);
 
   @override
-  State<BannerThree> createState() => _BannerThreeState();
+  State<TopCollection> createState() => _TopCollectionState();
 }
 
-class _BannerThreeState extends State<BannerThree> {
+class _TopCollectionState extends State<TopCollection> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 30.h,
+      height: 17.h,
       width: double.infinity,
-      color: Colors.grey.withOpacity(0.2),
+      color: HexColor("#F8F8FA"),
       child: Stack(
         children: [
           Positioned(
-            right: 20,
+            right: 25,
             bottom: 23,
             child: Center(
               child: Container(
-                width: 100,
-                height: 100,
+                width: 70,
+                height: 70,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.grey.withOpacity(0.4),
+                  color:HexColor("#ECECEC"),
                 ),
               ),
             ),
           ),
           Positioned(
             right: 8.0,
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset(
-                'assets/images/middle_banner3.png',
-                height: 29.h,
-                width: 35.w,
-                fit: BoxFit.cover,
-              ),
+            child: Image.asset(
+              'assets/images/middle_banner2.png',
+              height: 17.h,
+              width: 30.w,
+              fit: BoxFit.cover,
             ),
           ),
           Positioned.fill(
@@ -56,11 +54,11 @@ class _BannerThreeState extends State<BannerThree> {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8.0),
                         child: Text(
-                          '| Summer Collection 2021',
+                          '| Sale up to 40%',
                           style: kTextStyle.copyWith(
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                            color: Colors.grey,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w300,
+                            color: HexColor("#777E90"),
                           ),
                         ),
                       ),
@@ -68,11 +66,11 @@ class _BannerThreeState extends State<BannerThree> {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8.0),
                         child: Text(
-                          'Most sexy\n& fabulous\ndesign',
+                          'FOR SLIM\n& BEAUTY',
                           style: kTextStyle.copyWith(
-                            fontSize: 24,
-                            fontWeight: FontWeight.normal,
-                            color: Colors.black.withOpacity(0.6),
+                            fontSize: 20,
+                            fontWeight: FontWeight.w300,
+                            color: HexColor("#777E90"),
                           ),
                         ),
                       ),

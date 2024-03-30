@@ -1,6 +1,6 @@
 import 'package:ecom_101/screens/dashboard.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_svg/svg.dart';
 
 class MyTabPageScreen extends StatefulWidget {
   const MyTabPageScreen({Key? key}) : super(key: key);
@@ -38,41 +38,38 @@ class _MyTabPageScreenState extends State<MyTabPageScreen>
     return Scaffold(
       body: Column(
         children: [
-          Container(
-            color: Colors.white,
-            child: TabBar(
-              controller: _tabController,
-              tabs: [
-                _buildTab(
-                  icon: const Icon(
-                    Icons.female_outlined,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              color: Colors.white,
+              child: TabBar(
+                dividerColor: Colors.white,
+                controller: _tabController,
+                tabs: [
+                  _buildTab(
+                    svgAssetPath:'assets/images/female.svg',
+
+                    isActive: _tabController.index == 0,
+                    label: "Women",
                   ),
-                  isActive: _tabController.index == 0,
-                  label: "Women",
-                ),
-                _buildTab(
-                    icon: const Icon(Icons.male),
-                    isActive: _tabController.index == 1,
-                    label: "Men"),
-                _buildTab(
-                  label: "Accessories",
-                  icon: const Icon(
-                    FontAwesomeIcons.glasses,
-                    size: 24,
+                  _buildTab(
+                      svgAssetPath:'assets/images/male.svg',
+                      isActive: _tabController.index == 1,
+                      label: "Men"),
+                  _buildTab(
+                    label: "Accessories",
+                    svgAssetPath:'assets/images/accessories.svg',
+                    isActive: _tabController.index == 2,
                   ),
-                  isActive: _tabController.index == 2,
-                ),
-                _buildTab(
-                  label: "Beauty",
-                  icon: const Icon(
-                    FontAwesomeIcons.smile,
-                    size: 24,
+                  _buildTab(
+                    label: "Beauty",
+                    svgAssetPath:'assets/images/beauty.svg',
+                    isActive: _tabController.index == 3,
                   ),
-                  isActive: _tabController.index == 3,
+                ],
+                indicator: const BoxDecoration(
+                  color: Colors.transparent,
                 ),
-              ],
-              indicator: const BoxDecoration(
-                color: Colors.transparent,
               ),
             ),
           ),
@@ -93,8 +90,11 @@ class _MyTabPageScreenState extends State<MyTabPageScreen>
     );
   }
 
-  Widget _buildTab(
-      {required Icon icon, required bool isActive, required String label}) {
+  Widget _buildTab({
+    required String svgAssetPath,
+    required bool isActive,
+    required String label,
+  }) {
     Color iconColor = isActive ? Colors.white : Colors.black;
     Color labelColor = isActive ? Colors.black : Colors.grey;
 
@@ -111,12 +111,13 @@ class _MyTabPageScreenState extends State<MyTabPageScreen>
                     shape: BoxShape.circle,
                     color: isActive ? activeColor : Colors.grey.withOpacity(0.2),
                   ),
-                  child:  Center(
+                  child: Center(
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Icon(
-                        icon.icon,
-                        size: 20,
+                      child: SvgPicture.asset(
+                        svgAssetPath,
+                        width: 20,
+                        height: 20,
                         color: iconColor,
                       ),
                     ),
@@ -126,12 +127,12 @@ class _MyTabPageScreenState extends State<MyTabPageScreen>
                   label,
                   style: TextStyle(
                     color: labelColor,
-                    fontWeight: FontWeight.normal,fontSize: 12
+                    fontWeight: FontWeight.normal,
+                    fontSize: 12,
                   ),
                 ),
               ],
             ),
-
           ],
         ),
       ),

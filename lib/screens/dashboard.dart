@@ -1,11 +1,12 @@
-import 'package:ecom_101/components/banner_three.dart';
-import 'package:ecom_101/components/banner_two.dart';
+import 'package:ecom_101/components/summer_collection.dart';
+import 'package:ecom_101/components/top_collection.dart';
 import 'package:ecom_101/components/featured_products.dart';
-import 'package:ecom_101/components/banner_one.dart';
+import 'package:ecom_101/components/new_collection.dart';
 import 'package:ecom_101/components/recommended.dart';
+import 'package:ecom_101/components/split_banner.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-import '../shared_resources/carousel.dart';
+import '../components/carousel.dart';
 import '../shared_resources/text_header.dart';
 
 class DashboardScreen extends StatefulWidget {
@@ -39,13 +40,16 @@ class _DashboardScreenState extends State<DashboardScreen> {
               ),
               const TitleText(title: "Feature Products",),
               const FeaturedProducts(),
-              const BannerOne(),
+              const NewCollection(),
               const TitleText(title: "Recommended",),
               const RecommendedProducts(),
               const TitleText(title: "Top Collection",),
-              const BannerTwo(),
+              const TopCollection(),
               const SizedBox(height: 20,),
-              const BannerThree()
+              const SummerCollection(),
+              const SizedBox(height: 20,),
+              const SplitBanner()
+
 
 
             ],

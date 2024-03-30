@@ -39,14 +39,13 @@ dependencies:
   flutter_spinkit:
   staggered_grid_view_flutter:
   hexcolor:
-  dropdown_button2:
   get:
   google_fonts:
   provider:
-  bottom_navy_bar:
   badges:
   font_awesome_flutter:
-  carousel_slider:
+  flutter_rating_stars:
+  flutter_svg:
 
 
 dev_dependencies:
@@ -88,7 +87,13 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
+  fonts:
+    - family: Product Sans
+      fonts:
+        - asset: assets/fonts/Product Sans Bold.ttf
+        - asset: assets/fonts/Product Sans Bold Italic.ttf
+        - asset: assets/fonts/Product Sans Italic.ttf
+        - asset: assets/fonts/Product Sans Regular.ttf
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf

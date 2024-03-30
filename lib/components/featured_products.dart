@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:sizer/sizer.dart';
 
 import '../utils/constants.dart';
@@ -40,7 +41,7 @@ class _FeaturedProductsState extends State<FeaturedProducts> {
       physics: const ScrollPhysics(),
       scrollDirection: Axis.horizontal,
       child: SizedBox(
-        height: 30.h,
+        height: 35.h,
         child: ListView.builder(
           physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,
@@ -53,7 +54,7 @@ class _FeaturedProductsState extends State<FeaturedProducts> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    width: 130,
+                    width: 150,
                     height: 23.h,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
@@ -69,13 +70,22 @@ class _FeaturedProductsState extends State<FeaturedProducts> {
                       ),
                     ),
                   ),
+                  const SizedBox(
+                    height: 10,
+                  ),
                   Text(
                     featuredProducts[index]['productName'],
-                    style: kTextStyle.copyWith(fontSize: 15,color: Colors.black),
+                    style: kTextStyle.copyWith(
+                        fontSize: 12,
+                        color: HexColor("#1D1F22"),
+                        fontWeight: FontWeight.w500),
                   ),
                   Text(
                     featuredProducts[index]['productPrice'],
-                    style: kTextStyle.copyWith(fontSize: 15,color: Colors.black),
+                    style: kTextStyle.copyWith(
+                        fontSize: 16,
+                        color: HexColor("#1D1F22"),
+                        fontWeight: FontWeight.w700),
                   ),
                 ],
               ),

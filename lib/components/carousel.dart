@@ -1,5 +1,6 @@
 import 'package:ecom_101/utils/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class ImageCarousel extends StatefulWidget {
   final List<String> assetPaths;
@@ -48,10 +49,13 @@ class _ImageCarouselState extends State<ImageCarousel> {
                   child: Container(
                     padding: EdgeInsets.symmetric(horizontal: 8.0),
                     color: Colors.transparent,
-                    child:  Center(
+                    child: Center(
                       child: Text(
                         'Autumn\nCollection\n2021',
-                        style: kTextStyle.copyWith(fontSize: 24),
+                        style: kTextStyle.copyWith(
+                          fontSize: 22,
+                          color: HexColor("#FFFFFF"),
+                        ),
                       ),
                     ),
                   ),
@@ -68,7 +72,7 @@ class _ImageCarouselState extends State<ImageCarousel> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: List.generate(
               widget.assetPaths.length,
-                  (index) => buildDot(index: index),
+              (index) => buildDot(index: index),
             ),
           ),
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 import '../../utils/constants.dart';
 
@@ -12,15 +13,15 @@ class TitleText extends StatelessWidget {
       title: Text(
        title,
         style: kTextStyle.copyWith(
-            fontSize: 24,
-            color: Colors.black,
-            fontWeight: FontWeight.w700),
+            fontSize: 20,
+            color: HexColor("#000000"),
+            fontWeight: FontWeight.w600),
       ),
       trailing: Text(
         'Show all',
         style: kTextStyle.copyWith(
-            fontSize: 15,
-            color: Colors.grey.withOpacity(0.5),
+            fontSize: 13,
+            color: HexColor("#9B9B9B"),
             fontWeight: FontWeight.normal),
       ),
     );

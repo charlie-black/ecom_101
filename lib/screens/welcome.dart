@@ -27,6 +27,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     return Scaffold(
         body: Container(
       decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.5),
+            spreadRadius: 5,
+            blurRadius: 7,
+            offset: Offset(0, 3),
+          ),
+        ],
         color: HexColor("#000000").withOpacity(0.7),
         image: const DecorationImage(
           image: AssetImage('assets/images/splash.png'),
@@ -49,7 +57,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   fontWeight: FontWeight.w700,
                   color: Colors.white,
                   shadows: [
-                    const Shadow(color: Colors.black, blurRadius: 2)
+                    const Shadow(color: Colors.grey, blurRadius: 2)
                   ],
                 ),
               ),
@@ -57,13 +65,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             Padding(
               padding: const EdgeInsets.all(2.0),
               child: Text(
-                'The home for a fashionista',
+                'The home for a fashionista',textAlign: TextAlign.center,
                 style: kTextStyle.copyWith(
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
                   color: Colors.white,
                   shadows: [
-                    const Shadow(color: Colors.black, blurRadius: 2)
+                     Shadow(color: Colors.black.withOpacity(0.5), blurRadius: 2)
                   ],
                 ),
               ),
@@ -78,11 +86,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 onPressed: () {
                   navigationToPage();
                 },
-                height: 35,
-                width: 35.w,
+                height: 47,
+                width: 40.w,
                 borderRadius: 30,
                 borderColor: Colors.white,
-                colors: const [Colors.grey, Colors.grey],
+                colors:  [HexColor("#747778"), HexColor("#747778")],
               ),
             )
           ],

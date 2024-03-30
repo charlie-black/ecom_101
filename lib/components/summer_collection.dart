@@ -1,53 +1,49 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:sizer/sizer.dart';
 
 import '../utils/constants.dart';
 
-class BannerOne extends StatefulWidget {
-  const BannerOne({Key? key}) : super(key: key);
+class SummerCollection extends StatefulWidget {
+  const SummerCollection({Key? key}) : super(key: key);
 
   @override
-  State<BannerOne> createState() => _BannerOneState();
+  State<SummerCollection> createState() => _SummerCollectionState();
 }
 
-class _BannerOneState extends State<BannerOne> {
+class _SummerCollectionState extends State<SummerCollection> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 20.h,
+      height: 30.h,
       width: double.infinity,
-      color: Colors.grey.withOpacity(0.2),
+      color: HexColor("#F8F8FA"),
       child: Stack(
         children: [
           Positioned(
-            right: 3,
-            top: 5,
-            child: Container(
-              width: 100,
-              height: 100,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.grey.withOpacity(0.3),
-              ),
-              child: Center(
-                child: Container(
-                  width: 70,
-                  height: 70,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.grey.withOpacity(0.4),
-                  ),
+            right: 24,
+            bottom: 26,
+            child: Center(
+              child: Container(
+                width: 100,
+                height: 100,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: HexColor("#F3F3F3")
                 ),
               ),
             ),
           ),
           Positioned(
             right: 8.0,
-            child: Image.asset(
-              'assets/images/middle_banner.png',
-              height: 18.h,
-              width: 25.w,
-              fit: BoxFit.cover,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset(
+                'assets/images/middle_banner3.png',
+                height: 29.h,
+                width: 35.w,
+                fit: BoxFit.cover,
+              ),
             ),
           ),
           Positioned.fill(
@@ -61,11 +57,11 @@ class _BannerOneState extends State<BannerOne> {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8.0),
                         child: Text(
-                          '| NEW COLLECTION',
+                          '| Summer Collection 2021',
                           style: kTextStyle.copyWith(
-                            fontSize: 15,
-                            fontWeight: FontWeight.normal,
-                            color: Colors.grey,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w300,
+                            color: HexColor("#777E90"),
                           ),
                         ),
                       ),
@@ -73,11 +69,11 @@ class _BannerOneState extends State<BannerOne> {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8.0),
                         child: Text(
-                          'HANG OUT\n& PARTY',
+                          'Most sexy\n& fabulous\ndesign',
                           style: kTextStyle.copyWith(
-                            fontSize: 24,
-                            fontWeight: FontWeight.normal,
-                            color: Colors.black.withOpacity(0.6),
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500,
+                            color: HexColor("#353945"),
                           ),
                         ),
                       ),

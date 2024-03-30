@@ -1,34 +1,43 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:sizer/sizer.dart';
 
 import '../utils/constants.dart';
 
-class BannerTwo extends StatefulWidget {
-  const BannerTwo({Key? key}) : super(key: key);
+class NewCollection extends StatefulWidget {
+  const NewCollection({Key? key}) : super(key: key);
 
   @override
-  State<BannerTwo> createState() => _BannerTwoState();
+  State<NewCollection> createState() => _NewCollectionState();
 }
 
-class _BannerTwoState extends State<BannerTwo> {
+class _NewCollectionState extends State<NewCollection> {
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 20.h,
       width: double.infinity,
-      color: Colors.grey.withOpacity(0.2),
+      color: HexColor("#F8F8FA"),
       child: Stack(
         children: [
           Positioned(
-            right: 15,
-            bottom: 23,
-            child: Center(
-              child: Container(
-                width: 70,
-                height: 70,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.grey.withOpacity(0.4),
+            right: 3,
+            top: 5,
+            child: Container(
+              width: 100,
+              height: 100,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: HexColor("#E2E2E2"),
+              ),
+              child: Center(
+                child: Container(
+                  width: 70,
+                  height: 70,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.grey.withOpacity(0.2),
+                  ),
                 ),
               ),
             ),
@@ -36,7 +45,7 @@ class _BannerTwoState extends State<BannerTwo> {
           Positioned(
             right: 8.0,
             child: Image.asset(
-              'assets/images/middle_banner2.png',
+              'assets/images/middle_banner.png',
               height: 18.h,
               width: 25.w,
               fit: BoxFit.cover,
@@ -53,11 +62,11 @@ class _BannerTwoState extends State<BannerTwo> {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8.0),
                         child: Text(
-                          '| Sale up to 40%',
+                          '| NEW COLLECTION',
                           style: kTextStyle.copyWith(
-                            fontSize: 15,
+                            fontSize: 13,
                             fontWeight: FontWeight.normal,
-                            color: Colors.grey,
+                            color: HexColor("#777E90"),
                           ),
                         ),
                       ),
@@ -65,11 +74,11 @@ class _BannerTwoState extends State<BannerTwo> {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8.0),
                         child: Text(
-                          'FOR SLIM\n& BEAUTY',
+                          'HANG OUT\n& PARTY',
                           style: kTextStyle.copyWith(
-                            fontSize: 24,
+                            fontSize: 20,
                             fontWeight: FontWeight.normal,
-                            color: Colors.black.withOpacity(0.6),
+                            color: HexColor("#353945"),
                           ),
                         ),
                       ),

@@ -15,6 +15,7 @@ const kDefaultPadding = 8.0;
 final TextStyle kTextStyle =  TextStyle(
   color: kPrimaryTextColor,
   fontSize: 15,
+  fontFamily: 'Product Sans',
   fontWeight: FontWeight.bold,
 );
 
