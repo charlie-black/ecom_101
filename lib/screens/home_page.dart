@@ -1,6 +1,6 @@
 import 'package:ecom_101/screens/search_page.dart';
 import 'package:flutter/material.dart';
-import 'package:ecom_101/screens/tab_screen.dart';
+import 'package:ecom_101/screens/categories_tab_screen.dart';
 import 'package:ecom_101/utils/constants.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:flutter_svg/svg.dart';
@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
 
   final List<Widget> _pages = [
-    const MyTabPageScreen(),
+    const CategoriesTabScreen(),
     const SearchResultsPage(),
     const MyOrdersScreen(),
     Center(

@@ -2,14 +2,14 @@ import 'package:ecom_101/screens/dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class MyTabPageScreen extends StatefulWidget {
-  const MyTabPageScreen({Key? key}) : super(key: key);
+class CategoriesTabScreen extends StatefulWidget {
+  const CategoriesTabScreen({Key? key}) : super(key: key);
 
   @override
-  _MyTabPageScreenState createState() => _MyTabPageScreenState();
+  _CategoriesTabScreenState createState() => _CategoriesTabScreenState();
 }
 
-class _MyTabPageScreenState extends State<MyTabPageScreen>
+class _CategoriesTabScreenState extends State<CategoriesTabScreen>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
   Color activeColor = Colors.black;
